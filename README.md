@@ -36,6 +36,8 @@ Well, we are finally ready to model. And here is the performance comparison of m
 |  GBM  | 0.9619 | 2.5754 | 1.6048 |  0.8919  |          
 |  MLP  | 1.4072 | 4.2578 | 2.0634 |  0.8213  |          
 
+(The performance below is for reference only, as we have not looked carefully for hyper-parameters.)
+
 Since random forest has the best performance, we can see how close the prediction of RF made is to the ground truth.
 
 ![Prediction](img/prediction.png)
