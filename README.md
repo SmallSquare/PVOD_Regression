@@ -32,13 +32,13 @@ Well, we are finally ready to model. And here is the performance comparison of m
 
 | Model |  MAE   |  MSE   |  RMSE  | R-square |
 |:-----:|:------:|:------:|:------:|:--------:|
-|  RF   | 0.5170 | 1.1366 | 1.0661 |  0.9523  |          
-|  GBM  | 0.9619 | 2.5754 | 1.6048 |  0.8919  |          
-|  MLP  | 1.4072 | 4.2578 | 2.0634 |  0.8213  |          
+|  RF   | 0.5162 | 1.1332 | 1.0646 |  0.9524  |          
+|  GBM  | 0.5841 | 1.1142 | 1.0556 |  0.9532  |          
+|  MLP  | 1.1181 | 3.7166 | 1.9278 |  0.8440  |          
 
 (The performance below is for reference only, as we have not looked carefully for hyper-parameters.)
 
-Since random forest has the best performance, we can see how close the prediction of RF made is to the ground truth.
+Since GBM has the best performance, we can see how close the prediction of GBM made is to the ground truth.
 
 ![Prediction](img/prediction.png)
 
@@ -47,38 +47,38 @@ The RF and GBM can tell the importance of features:
 ```
 - RF Feature Importance -
 lmd_temperature 
- > 9.6921 %
+ > 9.6774 %
 lmd_pressure 
- > 3.6568 %
+ > 3.6530 %
 lmd_winddirection 
- > 1.0712 %
+ > 1.0908 %
 lmd_windspeed 
- > 1.1253 %
+ > 1.1318 %
 time_sin 
- > 52.7894 %
+ > 53.0341 %
 time_cos 
- > 24.5264 %
+ > 24.2303 %
 date_sin 
- > 2.6910 %
+ > 2.8041 %
 date_cos 
- > 4.4477 %
+ > 4.3784 %
 ```
 ```
 - GBM Feature Importance -
 lmd_temperature 
- > 8.7980 %
+ > 9.3780 %
 lmd_pressure 
- > 1.5802 %
+ > 3.5278 %
 lmd_winddirection 
- > 0.1962 %
+ > 0.7219 %
 lmd_windspeed 
- > 0.6686 %
+ > 0.6464 %
 time_sin 
- > 59.7374 %
+ > 53.9076 %
 time_cos 
- > 25.9409 %
+ > 23.7690 %
 date_sin 
- > 1.5174 %
+ > 2.8473 %
 date_cos 
- > 1.5614 %
+ > 5.2021 %
 ```
